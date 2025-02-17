@@ -1,16 +1,16 @@
-// filepath: /home/pdisney/projects/courses/301/gallery-of-horns/src/App.jsx
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Gallery from './components/Gallery';
+import './App.css';
+import Header from './Header';
+import Gallery from './Gallery';
+import Footer from './Footer';
 
-const App = () => {
+function App() {
   return (
-    <div>
+    <div className='App'>
       <Header />
-      <Gallery />
-      <Footer />
+        <Gallery />
+        <Footer />
     </div>
   );
-};
+}
 
 export default App;
