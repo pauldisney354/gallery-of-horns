@@ -1,20 +1,19 @@
-//he HornedBeast component needs to contain an <h2> that displays the title of the animal, an <img> element with src, alt and title attributes, and a <p> that displays the description.
+import PropTypes from 'prop-types';
 
-/* eslint-disable react/prop-types */
-
-function HornedBeast(props) {
+function HornedBeast({ title, image_url, description }) {
   return (
-    <>
-    <h2>{props.title}</h2>
-    <img
-    src={props.imageUrl}
-    alt={props.description}
-    title={props.title}
-    style={{ width: '20%'}}
-    />
-    <p>{props.description}</p>
-    </>
+    <div className="horned-beast">
+      <h2>{title}</h2>
+      <img src={image_url} alt={title} />
+      <p>{description}</p>
+    </div>
   );
 }
+
+HornedBeast.propTypes = {
+  title: PropTypes.string.isRequired,
+  image_url: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 export default HornedBeast;
